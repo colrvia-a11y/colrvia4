@@ -1,7 +1,8 @@
 {
   "name": "colrvia4",
   "scripts": {
-    "dev": "kill-port 9000 8080 5000 9199 4400 4000 4500 5001 && firebase emulators:start"
+    "dev": "kill-port 9000 8080 5000 9199 4400 4000 4500 5001 && firebase emulators:start",
+    "build": "echo 'No build step required'"
   },
   "devDependencies": {
     "kill-port": "^2.0.1"
