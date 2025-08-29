@@ -541,8 +541,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
         },
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
-        child: const Icon(Icons.auto_awesome),
         tooltip: 'Create Color Story',
+        child: const Icon(Icons.auto_awesome),
       ),
       body: Column(
         children: [

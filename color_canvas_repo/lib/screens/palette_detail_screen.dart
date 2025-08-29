@@ -80,8 +80,7 @@ class _PaletteDetailScreenState extends State<PaletteDetailScreen> {
   }
 
   Future<void> _exportCSV() async {
-    final csv = 'Brand,Code,Name,Hex\n' + 
-        widget.palette.colors.map((color) => '${color.brand ?? 'Unknown'},${color.code},"${color.name}",${color.hex}').join('\n');
+    final csv = 'Brand,Code,Name,Hex\n${widget.palette.colors.map((color) => '${color.brand ?? 'Unknown'},${color.code},"${color.name}",${color.hex}').join('\n')}';
     
     await Share.share(csv, subject: '${widget.palette.name} - Paint Colors');
   }

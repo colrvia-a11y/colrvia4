@@ -90,7 +90,7 @@ class _RollerScreenState extends RollerScreenStatePublic {
   int _rollRequestId = 0;
   
   // Track original palette order before any LRV sorting (for stable ties)
-  Map<String, int> _originalIndexMap = {};
+  final Map<String, int> _originalIndexMap = {};
   
   // Tools dock state
   bool _toolsOpen = false;
@@ -739,9 +739,7 @@ class _RollerScreenState extends RollerScreenStatePublic {
 
   Future<void> _shareCurrentPalette() async {
     if (_currentPalette.isEmpty) return;
-    final text = 'My Paint Palette:\n' +
-        _currentPalette.map((p) => '• ${p.name} (${p.hex})').join('\n') +
-        '\n\nCreated with Color Canvas';
+    final text = 'My Paint Palette:\n${_currentPalette.map((p) => '• ${p.name} (${p.hex})').join('\n')}\n\nCreated with Color Canvas';
     await Share.share(text);
 
     // Update funnel stage to share if there's an associated project

@@ -33,7 +33,7 @@ class _ColorStoryWizardScreenState extends State<ColorStoryWizardScreen> {
     'warm_cool': 0.5,           // warm ↔ cool  
     'airy_cozy': 0.5,           // airy ↔ cozy
   };
-  Set<String> _brandHints = {};
+  final Set<String> _brandHints = {};
   String _guidanceLevel = 'balanced';
   
   // UI state
@@ -242,7 +242,7 @@ class _ColorStoryWizardScreenState extends State<ColorStoryWizardScreen> {
       final color = palette.colors[i];
       print('🐛 Wizard: Color[$i] - hex: "${color.hex}", name: "${color.name}", brand: "${color.brand}", code: "${color.code}"');
       
-      if (color.hex == null || color.hex!.isEmpty) {
+      if (color.hex.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Color ${i + 1} is missing hex value')),
         );

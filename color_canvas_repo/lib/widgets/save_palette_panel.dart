@@ -6,9 +6,7 @@ import 'package:color_canvas/services/project_service.dart';
 import 'package:color_canvas/services/analytics_service.dart';
 import 'package:color_canvas/services/auth_guard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:color_canvas/screens/color_story_wizard_screen.dart';
 import 'package:color_canvas/screens/visualizer_screen.dart';
-import 'package:color_canvas/utils/color_utils.dart';
 
 class SavePalettePanel extends StatefulWidget {
   final String? projectId;

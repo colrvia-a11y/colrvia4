@@ -6,7 +6,7 @@ String paintIdentity(Paint p) {
   final brand = p.brandId.isNotEmpty ? p.brandId : p.brandName;
   final code = (p.code.isNotEmpty ? p.code : p.name).toLowerCase();
   final collection = (p.collection ?? '').toLowerCase();
-  return '${brand}|${collection}|${code}';
+  return '$brand|$collection|$code';
 }
 
 enum HarmonyMode {
@@ -454,9 +454,9 @@ class PaletteGenerator {
       size: size, seedL: seedLch[0], seedC: seedLch[1], seedH: seedLch[2]);
 
     // LRV bands per slot from size-based ladder
-    final _bands = _lrvBandsForSize(size);
-    final List<double> minLrv = _bands.map((b) => b.$1).toList();
-    final List<double> maxLrv = _bands.map((b) => b.$2).toList();
+    final bands = _lrvBandsForSize(size);
+    final List<double> minLrv = bands.map((b) => b.$1).toList();
+    final List<double> maxLrv = bands.map((b) => b.$2).toList();
 
     // Build candidate lists per slot (take up to 24 near target, then band).
     // If a slot is locked, force its candidate list to the single locked paint.

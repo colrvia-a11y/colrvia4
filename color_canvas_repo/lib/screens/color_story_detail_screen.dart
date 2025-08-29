@@ -50,9 +50,9 @@ class _ColorStoryDetailScreenState extends State<ColorStoryDetailScreen> {
   bool _isOwner = false;
   
   // Variations state
-  List<ColorStory> _variants = [];
-  Map<String, bool> _variantLoading = {};
-  Map<String, String?> _variantErrors = {};
+  final List<ColorStory> _variants = [];
+  final Map<String, bool> _variantLoading = {};
+  final Map<String, String?> _variantErrors = {};
   
   // Variation presets
   final List<Map<String, String>> _variationPresets = [

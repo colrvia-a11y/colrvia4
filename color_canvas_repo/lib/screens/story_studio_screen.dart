@@ -24,18 +24,18 @@ class _StoryStudioScreenState extends State<StoryStudioScreen> {
   String _title = '';
   String _slug = '';
   String _description = '';
-  Set<String> _selectedThemes = {};
-  Set<String> _selectedFamilies = {};
-  Set<String> _selectedRooms = {};
-  List<String> _tags = [];
+  final Set<String> _selectedThemes = {};
+  final Set<String> _selectedFamilies = {};
+  final Set<String> _selectedRooms = {};
+  final List<String> _tags = [];
   File? _heroImage;
   String _heroImageUrl = '';
   
   // Palette data
-  List<PaletteEntry> _selectedColors = [];
+  final List<PaletteEntry> _selectedColors = [];
   List<Paint> _availablePaints = [];
   List<Paint> _filteredPaints = [];
-  String _paintSearchQuery = '';
+  final String _paintSearchQuery = '';
   String? _selectedBrand;
   
   // UI state
@@ -1850,7 +1850,7 @@ class _StoryStudioScreenState extends State<StoryStudioScreen> {
                 ),
               
               // Color Reveal Cards (like in Color Story Detail)
-              ..._selectedColors.map((entry) => _buildPreviewColorCard(entry, textColor)).toList(),
+              ..._selectedColors.map((entry) => _buildPreviewColorCard(entry, textColor)),
               
               // CTA Section Preview
               Container(
@@ -2087,7 +2087,7 @@ class _StoryStudioScreenState extends State<StoryStudioScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            '"${_title}" has been successfully published and is now available in the Explore section.',
+            '"$_title" has been successfully published and is now available in the Explore section.',
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: Colors.grey[600],

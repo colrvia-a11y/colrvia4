@@ -170,7 +170,7 @@ class _HeroStartCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: theme.colorScheme.surfaceVariant.withOpacity(.6),
+          color: theme.colorScheme.surfaceContainerHighest.withOpacity(.6),
           borderRadius: BorderRadius.circular(24),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -280,7 +280,7 @@ class _FunnelChip extends StatelessWidget {
         avatar: Icon(icon, size: 16),
         label: Text(label),
         side: active ? BorderSide(color: theme.colorScheme.primary) : null,
-        backgroundColor: active ? theme.colorScheme.primaryContainer : theme.colorScheme.surfaceVariant.withOpacity(.5),
+        backgroundColor: active ? theme.colorScheme.primaryContainer : theme.colorScheme.surfaceContainerHighest.withOpacity(.5),
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       ),
     );
@@ -334,7 +334,7 @@ class _EmptyProjects extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceVariant.withOpacity(.5),
+        color: theme.colorScheme.surfaceContainerHighest.withOpacity(.5),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -399,7 +399,7 @@ class _Pill extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: theme.colorScheme.surfaceVariant.withOpacity(.6),
+          color: theme.colorScheme.surfaceContainerHighest.withOpacity(.6),
           borderRadius: BorderRadius.circular(24),
         ),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
@@ -681,7 +681,7 @@ class _ProjectsSkeleton extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: theme.colorScheme.surfaceVariant.withOpacity(.3),
+            color: theme.colorScheme.surfaceContainerHighest.withOpacity(.3),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Column(

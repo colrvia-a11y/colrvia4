@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../models/color_story.dart';
 import '../services/firebase_service.dart';
-import '../services/project_service.dart';
 import '../services/analytics_service.dart';
 
 class VisualizerScreen extends StatefulWidget {

@@ -1,5 +1,6 @@
 /// Demo file showing the expected Cloud Function error structure
 /// This should NOT be included in production builds - it's for development/testing only
+library;
 
 /// Example of how Cloud Functions should structure error responses:
 

@@ -131,7 +131,7 @@ class GradientHeroUtils {
         ? ClipRRect(
             borderRadius: borderRadius ?? BorderRadius.zero,
             child: Image.network(
-              heroImageUrl!,
+              heroImageUrl,
               fit: BoxFit.cover,
               height: height,
               width: double.infinity,

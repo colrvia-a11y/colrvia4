@@ -333,7 +333,7 @@ class FirebaseService {
     final snapshot = await _db.collection('colorStories').get();
     return snapshot.docs.map((doc) => {
       'id': doc.id,
-      ...doc.data() as Map<String, dynamic>,
+      ...doc.data(),
     }).toList();
   }
   
@@ -348,7 +348,7 @@ class FirebaseService {
     // Simple text search - in production would use Algolia or similar
     final snapshot = await _db.collection('paints')
       .where('name', isGreaterThanOrEqualTo: query)
-      .where('name', isLessThan: query + 'z')
+      .where('name', isLessThan: '${query}z')
       .limit(50)
       .get();
     

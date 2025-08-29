@@ -228,7 +228,7 @@ class _FeaturesScreenState extends State<FeaturesScreen>
                         ?.copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 200,
                   child: ListView.builder(
                     padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),

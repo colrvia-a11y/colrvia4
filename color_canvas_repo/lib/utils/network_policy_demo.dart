@@ -1,5 +1,6 @@
 /// Demo file showing Network Policy - Wi-Fi Only Media Fetch functionality
 /// This should NOT be included in production builds - it's for development/testing only
+library;
 
 /// Example usage of NetworkGuard for different scenarios:
 

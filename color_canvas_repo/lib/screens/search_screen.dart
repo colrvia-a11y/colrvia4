@@ -191,7 +191,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           },
                           label: Text(brand.name),
                         ),
-                      )).toList(),
+                      )),
                     ],
                   ),
                 ),

@@ -16,7 +16,7 @@ class AiService {
       throw Exception('Cannot generate color story: Palette has no colors');
     }
     
-    final safeName = palette.name?.trim().isEmpty == true ? 'Untitled Palette' : (palette.name ?? 'Untitled Palette');
+    final safeName = palette.name.trim().isEmpty == true ? 'Untitled Palette' : (palette.name ?? 'Untitled Palette');
     final safeRoom = room.trim().isEmpty ? 'living room' : room;
     final safeStyle = style.trim().isEmpty ? 'modern' : style;
     
@@ -27,8 +27,8 @@ class AiService {
         'items': palette.colors.map((c) => {
           'hex': c.hex ?? '#000000', // Fallback for null hex
           'brandName': (c.brand?.trim().isEmpty == true) ? '' : (c.brand ?? ''),
-          'name': (c.name?.trim().isEmpty == true) ? 'Untitled Color' : (c.name ?? 'Untitled Color'),
-          'code': (c.code?.trim().isEmpty == true) ? '' : (c.code ?? ''),
+          'name': (c.name.trim().isEmpty == true) ? 'Untitled Color' : (c.name ?? 'Untitled Color'),
+          'code': (c.code.trim().isEmpty == true) ? '' : (c.code ?? ''),
         }).toList(),
       },
       'room': safeRoom,
