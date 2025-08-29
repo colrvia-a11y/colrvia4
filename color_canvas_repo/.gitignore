@@ -1,0 +1,54 @@
+# Common
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cache/
+dist/
+build/
+# Node / Web
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+.next/
+.out/
+.vercel/
+.angular/
+.svelte-kit/
+            
+# Flutter / Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+build/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Pods/
+macos/Pods/
+android/.gradle/
+android/app/build/
+*.lock
+            
+# Firebase
+.firebase/
+firebase-debug.log
+.runtimeconfig.json
+.functions-log
+functions/node_modules/
+            
+# Mobile/Cloud secrets (do NOT commit)
+google-services.json
+GoogleService-Info.plist
+serviceAccount*.json
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
